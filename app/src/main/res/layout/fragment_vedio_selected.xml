@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/_30sdp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:background="@drawable/ic_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_height="@dimen/_260sdp"
+
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_back">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/dove_grey"
+            android:layout_height="match_parent">
+
+            <VideoView
+                android:id="@+id/img_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/image_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center"
+        android:text="Image Current Name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="@+id/card_view"
+        app:layout_constraintStart_toStartOf="@+id/card_view"
+        app:layout_constraintTop_toBottomOf="@+id/card_view" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Size"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_name" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_60sdp"
+        android:text="0MB"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_size" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_codec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Codec"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintStart_toStartOf="@+id/title_size"
+        app:layout_constraintTop_toBottomOf="@+id/title_size" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_codec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="codec_type"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/title_codec"
+        app:layout_constraintStart_toStartOf="@+id/tv_size"
+        app:layout_constraintTop_toTopOf="@+id/title_codec" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_compress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:backgroundTint="@color/astronaut_blue"
+        android:text="@string/compress"
+        android:textSize="@dimen/_18ssp"
+        app:cornerRadius="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

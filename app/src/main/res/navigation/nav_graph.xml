@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/splashSrcFragment"
+        android:name="com.example.imagecom.ui.splash.SplashSrcFragment"
+        android:label="fragment_splash_src"
+        tools:layout="@layout/fragment_splash_src" >
+        <action
+            android:id="@+id/action_splashSrcFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/compressImageFragment"
+        android:name="com.example.imagecom.ui.image_compress_epic.CompressImageFragment"
+        android:label="fragment_compress_image"
+        tools:layout="@layout/fragment_compress_image" >
+        <action
+            android:id="@+id/action_compressImageFragment_to_imageSelectedFragment"
+            app:destination="@id/imageSelectedFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageSelectedFragment"
+        android:name="com.example.imagecom.ui.image_compress_epic.ImageSelectedFragment"
+        android:label="fragment_image_selected"
+        tools:layout="@layout/fragment_image_selected" >
+        <action
+            android:id="@+id/action_imageSelectedFragment_to_resultImageFragment"
+            app:destination="@id/resultImageFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popUpTo="@id/dashboardFragment" />
+        <argument
+            android:name="imgUri"
+            app:argType="android.net.Uri" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultImageFragment"
+        android:name="com.example.imagecom.ui.image_compress_epic.ResultImageFragment"
+        android:label="fragment_result_image"
+        tools:layout="@layout/fragment_result_image" >
+        <argument
+            android:name="imgUri"
+            app:argType="android.net.Uri" />
+        <argument
+            android:name="fileSize"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.imagecom.ui.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_compressImageFragment"
+            app:destination="@id/compressImageFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_compressVedioFragment"
+            app:destination="@id/compressVedioFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_aboutDetailsFragment"
+            app:destination="@id/aboutDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/compressVedioFragment"
+        android:name="com.example.imagecom.ui.video_compress_epic.CompressVedioFragment"
+        android:label="fragment_compress_vedio"
+        tools:layout="@layout/fragment_compress_vedio" >
+        <action
+            android:id="@+id/action_compressVedioFragment_to_vedioSelectedFragment"
+            app:destination="@id/vedioSelectedFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/vedioSelectedFragment"
+        android:name="com.example.imagecom.ui.video_compress_epic.VedioSelectedFragment"
+        android:label="fragment_vedio_selected"
+        tools:layout="@layout/fragment_vedio_selected" >
+        <action
+            android:id="@+id/action_vedioSelectedFragment_to_resultVideoFragment"
+            app:destination="@id/resultVideoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popUpTo="@id/dashboardFragment" />
+        <argument
+            android:name="videoUri"
+            app:argType="android.net.Uri" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultVideoFragment"
+        android:name="com.example.imagecom.ui.video_compress_epic.ResultVideoFragment"
+        android:label="fragment_result_video"
+        tools:layout="@layout/fragment_result_video" >
+        <argument
+            android:name="videoUri"
+            app:argType="android.net.Uri" />
+        <argument
+            android:name="fileSize"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutDetailsFragment"
+        android:name="com.example.imagecom.ui.about.AboutDetailsFragment"
+        android:label="fragment_about_details"
+        tools:layout="@layout/fragment_about_details" >
+        <action
+            android:id="@+id/action_aboutDetailsFragment_to_contactUsFragment"
+            app:destination="@id/contactUsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.example.imagecom.ui.about.ContactUsFragment"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+</navigation>

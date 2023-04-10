@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ImageCom</string>
+    <string name="welcome">Welcome</string>
+    <string name="compress_your_image_size_and_edit_it">Compress your image size and edit it!</string>
+    <string name="let_s_start">Let\'s Start</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="compress_images_without_losing_quality">Compress Images Without Losing Quality</string>
+    <string name="only_jpg_png_mkv_flv_and_mpeg_are_currently_supported">Only jpg, png, mkv, flv and mpeg are currently supported</string>
+    <string name="compress">Compress</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="kb">KB</string>
+    <string name="mb">MB</string>
+    <string name="compressed_successfully">Compressed Successfully</string>
+    <string name="save_to_device">Save to Device</string>
+
+    <string-array name="about">
+        <item>Contact Us</item>
+        <item>Rate Us</item>
+        <item>Term of Use</item>
+        <item>Privacy Policy</item>
+    </string-array>
+</resources>
