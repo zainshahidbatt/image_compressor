@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1078108358611",
+    "project_id": "imagecom-a7c69",
+    "storage_bucket": "imagecom-a7c69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078108358611:android:6381a40e0501d03fbed126",
+        "android_client_info": {
+          "package_name": "com.example.imagecom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078108358611-qfej2iunr0d0b973lj24qj9him18dv2j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ9ovHfUzWy1a7-np_X8-d54OoPUZnpXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078108358611-qfej2iunr0d0b973lj24qj9him18dv2j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
